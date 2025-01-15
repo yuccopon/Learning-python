@@ -91,3 +91,19 @@ webbrowser.open(url)
 ### 特定のWebページを開くには、webbrowser.open関数を使います。
 ### (参考サイト)https://qiita.com/sastrum/items/518579bc00dfae3cd293
 
+## 数値を好きなだけ入力させて、その平均と今まで入力した数値を表示させる方法
+
+```python
+a = []
+fin = False
+while not fin:
+    num = input("整数を入力してください。終了はfを入力してください。")
+    if num == "f":
+        fin = True
+    else:
+        a.append(int(num))
+        print("あなたが入力した値は", a, "です。")
+
+print("あなたが入力した値は", a, "です。")
+print("あなたが入力した値の平均は", sum(a) / len(a), "です。")     
+```
